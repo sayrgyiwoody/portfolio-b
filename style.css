@@ -1,3 +1,13 @@
 * {
     font-family: 'Poppins', sans-serif;
 }
+
+.Bgblack {
+    background-color: #262626;
+}
+.text-light {
+    color: #fff;
+}
+.text-dark {
+    color: #262626;
+}
