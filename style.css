@@ -11,3 +11,10 @@
 .text-dark {
     color: #262626;
 }
+
+
+@media only screen and (max-width: 600px) {
+    body {
+      padding-left: 12px;
+    }
+  }
