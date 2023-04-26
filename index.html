@@ -21,14 +21,14 @@
 
  </head>
  <body id="body">
-  <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert">
+  <!-- <div class="alert alert-primary d-flex align-items-center justify-content-center" role="alert">
     <svg xmlns="http://www.w3.org/2000/svg" style="width: 30px;" class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img" aria-label="Warning:">
       <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
     </svg>
     <div>
       Dark Mode still Developing
     </div>
-  </div>
+  </div> -->
     <div class="container sticky-top">
         <!--Start of navigation-->
         <nav class="navbar navbar-expand-lg bg-white shadow-sm rounded ">
@@ -78,7 +78,7 @@
           </div>
           <div class="col-md-6 mt-5 order-md-first">
               <p class="text-muted mb-1">Hello I'm</p>
-              <h1 class= " text-uppercase fw-bold text-dark">Web developer</h1>
+              <h1 class="text-uppercase fw-bold h-dark">Web developer</h1>
               <h2 class="fs-4 text-primary" >Waiyan Tun</h2>
               <p class="mt-4 text-muted">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea facilis dicta aliquid cum voluptatem unde velit dolor quis soluta ducimus. Dolore culpa exercitationem provident modi nemo id corrupti doloremque veniam.</p>
               <a href="#" class="btn btn-primary mb-3 mb-md-0">My Work</a>
@@ -95,7 +95,7 @@
       <div class="container-lg ">
         <div class="row text-center mb-2 mb-lg-3">
           <div class="col">
-            <h1 class="section-title text-dark">About Me</h1>
+            <h1 class="section-title h-dark">About Me</h1>
           </div>
         </div>
         <div class="row">
@@ -426,11 +426,20 @@
 /*----Dark Mode-----*/
 document.getElementById("darkMode").addEventListener("click", _ => {
         document.getElementById("body").classList.toggle("Bgblack");
+        // document.querySelector(".h-dark").classList.toggle("text-white");
+
+        const elements1 = document.querySelectorAll(".h-dark");
+
+        elements1.forEach((element) => {
+          // element.classList.remove('text-dark');
+          element.classList.toggle('text-white');
+        })
+
         const elements = document.querySelectorAll(".text-dark");
 
         elements.forEach((element) => {
-          element.classList.remove('text-dark');
-          element.classList.add('text-white');
+          // element.classList.remove('text-dark');
+          element.classList.toggle('text-white');
         })
         document.querySelector(".text-dark").classList.toggle("text-white");
         // document.getElementById("darkMode_label").classList.toggle("text-light")
